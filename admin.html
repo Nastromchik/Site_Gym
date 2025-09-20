@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Админ-панель — Pulse Gym</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <style>
+    .admin-container { max-width: 900px; margin: 2rem auto; }
+    .stat-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
+    .stat-card { background: #fff; border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; text-align: center; }
+    .stat-card h3 { margin: 0 0 0.5rem; font-size: 1rem; color: var(--muted); }
+    .stat-card p { margin: 0; font-size: 2rem; font-weight: 700; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+    th { background-color: var(--surface); }
+    .login-form { max-width: 400px; margin: 4rem auto; padding: 2rem; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div id="login-view" style="display: none;">
+      <div class="card login-form">
+        <h2>Вход для администратора</h2>
+        <form id="loginForm">
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-field">
+            <label for="password">Пароль</label>
+            <input type="password" id="password" required />
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Войти</button>
+          <p id="login-error" class="error" style="text-align: center; margin-top: 1rem;"></p>
+        </form>
+      </div>
+    </div>
+
+    <div id="dashboard-view" style="display: none;">
+      <header class="site-header">
+        <div class="container nav-wrap">
+          <a href="index.html" class="logo"><span>Pulse Gym (Админ)</span></a>
+          <button id="logoutBtn" class="btn btn-outline">Выйти</button>
+        </div>
+      </header>
+      <main class="admin-container">
+        <h2>Статистика</h2>
+        <div class="stat-cards">
+          <div class="stat-card">
+            <h3>Всего посещений</h3>
+            <p id="total-visits">0</p>
+          </div>
+          <div class="stat-card">
+            <h3>Уникальные посетители</h3>
+            <p id="unique-visitors">0</p>
+          </div>
+          <div class="stat-card">
+            <h3>Заявки</h3>
+            <p id="total-submissions">0</p>
+          </div>
+        </div>
+
+        <h2>Последние посещения (100)</h2>
+        <div style="overflow-x: auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>IP</th>
+                <th>Страница</th>
+                <th>Дата</th>
+                <th>User Agent</th>
+              </tr>
+            </thead>
+            <tbody id="visits-table"></tbody>
+          </table>
+        </div>
+
+        <h2 style="margin-top: 2rem;">Заявки с сайта</h2>
+        <div style="overflow-x: auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>Имя</th>
+                <th>Телефон</th>
+                <th>Цель</th>
+                <th>Дата</th>
+              </tr>
+            </thead>
+            <tbody id="submissions-table"></tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/admin.js"></script>
+</body>
+</html>

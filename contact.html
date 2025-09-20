@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Контакты и запись — Pulse Gym</title>
+  <meta name="description" content="Свяжитесь с Pulse Gym: адрес, телефон, схема проезда. Запись на пробную тренировку и консультацию тренера." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo" aria-label="Pulse Gym — на главную">
+        <svg xmlns="http://www.w3.org/2000/svg" class="logo-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M7 13H3a1 1 0 1 1 0-2h4V8a1 1 0 1 1 2 0v3h2V6a1 1 0 1 1 2 0v5h2V8a1 1 0 1 1 2 0v3h4a1 1 0 1 1 0 2h-4v3a1 1 0 1 1-2 0v-3h-2v5a1 1 0 1 1-2 0v-5H9v3a1 1 0 1 1-2 0v-3z"/></svg>
+        <span>Pulse Gym</span>
+      </a>
+      <nav class="main-nav" aria-label="Главная навигация">
+        <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="primary-menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="primary-menu" class="menu">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="classes.html">Направления</a></li>
+          <li><a href="trainers.html">Тренеры</a></li>
+          <li><a class="active" href="contact.html">Контакты</a></li>
+          <li class="menu-cta"><a class="btn btn-primary" href="contact.html">Записаться</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-hero">
+      <div class="container narrow">
+        <h1>Контакты и запись</h1>
+        <p class="lead">Оставьте заявку — мы свяжемся в течение 15 минут и подскажем оптимальный формат.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid contact-grid">
+        <div class="card">
+          <h2>Свяжитесь с нами</h2>
+          <ul class="contact-list">
+            <li>📍 Москва, ул. Примерная, 12</li>
+            <li>📞 +7 (999) 123‑45‑67</li>
+            <li>✉️ hello@pulsegym.ru</li>
+            <li>🕒 Пн–Вс: 7:00–23:00</li>
+          </ul>
+          <div class="map">
+            <iframe title="Карта проезда" src="https://maps.google.com/maps?q=Москва%2C%20ул.%20Примерная%2012&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Записаться</h2>
+          <form id="contactForm" novalidate>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" placeholder="Ваше имя" required />
+                <small class="error"></small>
+              </div>
+              <div class="form-field">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___‑__‑__" required />
+                <small class="error"></small>
+              </div>
+              <div class="form-field">
+                <label for="email">E‑mail (необязательно)</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" />
+                <small class="error"></small>
+              </div>
+              <div class="form-field">
+                <label for="goal">Цель</label>
+                <select id="goal" name="goal" required>
+                  <option value="">Выберите цель</option>
+                  <option>Похудение</option>
+                  <option>Набор массы</option>
+                  <option>Поддержание формы</option>
+                  <option>Реабилитация</option>
+                  <option>Другое</option>
+                </select>
+                <small class="error"></small>
+              </div>
+              <div class="form-field span-2">
+                <label for="message">Комментарий</label>
+                <textarea id="message" name="message" rows="4" placeholder="Удобное время, желаемый тренер или программа..."></textarea>
+              </div>
+              <div class="form-field span-2">
+                <label class="checkbox">
+                  <input type="checkbox" id="policy" name="policy" required />
+                  <span>Соглашаюсь с <a href="#policy">политикой конфиденциальности</a></span>
+                </label>
+                <small class="error"></small>
+              </div>
+            </div>
+            <button class="btn btn-primary w-100" type="submit">Отправить заявку</button>
+            <p class="form-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="policy" class="section">
+      <div class="container narrow">
+        <h2>Политика конфиденциальности</h2>
+        <p class="muted">Заполняя форму, вы передаете контактные данные для связи по вопросам услуг фитнес-клуба. Мы не передаем данные третьим лицам и используем их только для обработки вашей заявки.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo footer-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" class="logo-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M7 13H3a1 1 0 1 1 0-2h4V8a1 1 0 1 1 2 0v3h2V6a1 1 0 1 1 2 0v5h2V8a1 1 0 1 1 2 0v3h4a1 1 0 1 1 0 2h-4v3a1 1 0 1 1-2 0v-3h-2v5a1 1 0 1 1-2 0v-5H9v3a1 1 0 1 1-2 0в-3z"/></svg>
+          <span>Pulse Gym</span>
+        </a>
+        <p class="muted">Ждем вас на тренировке!</p>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul class="contact-list">
+          <li>📍 Москва, ул. Примерная, 12</li>
+          <li>📞 +7 (999) 123‑45‑67</li>
+          <li>✉️ hello@pulsegym.ru</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="classes.html">Направления</a></li>
+          <li><a href="trainers.html">Тренеры</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>© <span id="year"></span> Pulse Gym</span>
+        <a class="muted" href="#policy">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pulse Gym — фитнес-клуб в вашем ритме</title>
+  <meta name="description" content="Pulse Gym — современный фитнес-клуб с профессиональными тренерами, удобной локацией и разнообразными направлениями: силовые, кардио, йога, бокс и функциональные тренировки." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <meta property="og:title" content="Pulse Gym — фитнес-клуб в вашем ритме">
+  <meta property="og:description" content="Стань сильнее с каждым днем. Профессиональные тренеры, современное оборудование, гибкие абонементы.">
+  <meta property="og:type" content="website">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo" aria-label="Pulse Gym — на главную">
+        <svg xmlns="http://www.w3.org/2000/svg" class="logo-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 13H3a1 1 0 1 1 0-2h4V8a1 1 0 1 1 2 0v3h2V6a1 1 0 1 1 2 0v5h2V8a1 1 0 1 1 2 0v3h4a1 1 0 1 1 0 2h-4v3a1 1 0 1 1-2 0v-3h-2v5a1 1 0 1 1-2 0v-5H9v3a1 1 0 1 1-2 0v-3z"/></svg>
+        <span>Pulse Gym</span>
+      </a>
+      <nav class="main-nav" aria-label="Главная навигация">
+        <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="primary-menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="primary-menu" class="menu">
+          <li><a class="active" href="index.html">Главная</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="classes.html">Направления</a></li>
+          <li><a href="trainers.html">Тренеры</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+          <li class="menu-cta"><a class="btn btn-primary" href="contact.html">Записаться</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Стань сильнее с каждым днем</h1>
+          <p>Современный зал, сертифицированные тренеры и программы под любую цель: сила, выносливость, здоровье и хорошее настроение.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="contact.html">Записаться на пробную</a>
+            <a class="btn btn-outline" href="classes.html">Смотреть направления</a>
+          </div>
+          <ul class="hero-bullets">
+            <li>Оборудование премиум-класса</li>
+            <li>Гибкие абонементы</li>
+            <li>Душ и парковка</li>
+          </ul>
+        </div>
+        <div class="hero-media">
+          <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=1200&q=60" alt="Зал тренажеров Pulse Gym" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <section class="features section">
+      <div class="container">
+        <h2 class="section-title">Почему выбирают нас</h2>
+        <div class="grid cards-4">
+          <article class="card feature">
+            <div class="ic"><span>24/7</span></div>
+            <h3>Удобный график</h3>
+            <p>Тренируйтесь в удобное для вас время. Ранние пташки и ночные совы — всем рады.</p>
+          </article>
+          <article class="card feature">
+            <div class="ic">🏋️</div>
+            <h3>Премиум-оборудование</h3>
+            <p>Силовые рамы, свободные веса, кардио-зона и функциональные станции.</p>
+          </article>
+          <article class="card feature">
+            <div class="ic">🎯</div>
+            <h3>Программы под цель</h3>
+            <p>Набор массы, снижение веса, реабилитация, подготовка к соревнованиям.</p>
+          </article>
+          <article class="card feature">
+            <div class="ic">👩‍🏫</div>
+            <h3>Тренеры-профессионалы</h3>
+            <p>Персональные занятия, сопровождение и контроль прогресса.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing section">
+      <div class="container">
+        <h2 class="section-title">Тарифы и абонементы</h2>
+        <div class="grid cards-3">
+          <article class="card price">
+            <h3>Дневной</h3>
+            <p class="price-value"><span>1 500 ₽</span> / месяц</p>
+            <ul class="list">
+              <li>Будни 8:00–16:00</li>
+              <li>Кардио + силовая зона</li>
+              <li>1 консультация тренера</li>
+            </ul>
+            <a class="btn btn-outline w-100" href="contact.html?plan=day">Выбрать</a>
+          </article>
+          <article class="card price popular">
+            <div class="badge">Хит</div>
+            <h3>Стандарт</h3>
+            <p class="price-value"><span>2 700 ₽</span> / месяц</p>
+            <ul class="list">
+              <li>Ежедневно 7:00–23:00</li>
+              <li>Все зоны зала</li>
+              <li>2 тренировки с тренером</li>
+            </ul>
+            <a class="btn btn-primary w-100" href="contact.html?plan=standard">Выбрать</a>
+          </article>
+          <article class="card price">
+            <h3>VIP</h3>
+            <p class="price-value"><span>5 900 ₽</span> / месяц</p>
+            <ul class="list">
+              <li>Без ограничений</li>
+              <li>Персональный план</li>
+              <li>SPA/сауна</li>
+            </ul>
+            <a class="btn btn-outline w-100" href="contact.html?plan=vip">Выбрать</a>
+          </article>
+        </div>
+        <p class="muted center mt-2">Есть разовые посещения и корпоративные тарифы — уточняйте на ресепшене или в форме.</p>
+      </div>
+    </section>
+
+    <section class="gallery section">
+      <div class="container">
+        <h2 class="section-title">Наш зал и атмосфера</h2>
+        <div class="grid gallery-grid">
+          <img class="card" src="https://giowellness.ru/ozera-39.jpg" alt="Силовая зона">
+          <img class="card" src="https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?auto=format&fit=crop&w=1000&q=60" alt="Персональная тренировка">
+          <img class="card" src="https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&w=1000&q=60" alt="Зона бокса">
+          <img class="card" src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=1000&q=60" alt="Йога-зал">
+          <img class="card" src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=1000&q=60" alt="Функциональная зона">
+          <img class="card" src="https://sportsgeeks.ru/wp-content/uploads/2020/12/running-treadmill.jpg" alt="Кардио‑тренажеры — беговые дорожки и эллипсы" loading="lazy">
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta section">
+      <div class="container cta-box">
+        <div>
+          <h2>Готовы начать? Первая тренировка — со скидкой 50%</h2>
+          <p>Оставьте заявку сегодня и получите консультацию тренера бесплатно.</p>
+        </div>
+        <a class="btn btn-primary" href="contact.html">Записаться</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo footer-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" class="logo-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M7 13H3a1 1 0 1 1 0-2h4V8a1 1 0 1 1 2 0v3h2V6a1 1 0 1 1 2 0v5h2V8a1 1 0 1 1 2 0v3h4a1 1 0 1 1 0 2h-4v3a1 1 0 1 1-2 0v-3h-2v5a1 1 0 1 1-2 0v-5H9v3a1 1 0 1 1-2 0v-3z"/></svg>
+          <span>Pulse Gym</span>
+        </a>
+        <p class="muted">Современный фитнес-клуб с душой и характером. Мы поможем вам полюбить тренировки.</p>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul class="contact-list">
+          <li>📍 Москва, ул. Примерная, 12</li>
+          <li>📞 +7 (999) 123‑45‑67</li>
+          <li>✉️ hello@pulsegym.ru</li>
+          <li>🕒 Пн–Вс: 7:00–23:00</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="classes.html">Направления</a></li>
+          <li><a href="trainers.html">Тренеры</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+        <div class="socials">
+          <a href="#" aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.75a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>
+          </a>
+          <a href="#" aria-label="VK" title="VK">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 7c0-.6.4-1 1-1h2.6c.5 0 .9.3 1 .7.3 1 .8 2 1.5 3 .2.3.6.3.8 0l.7-1.1c.1-.2.1-.4 0-.6L9.7 6.2c-.2-.3 0-.7.4-.7H13c.5 0 1 .3 1.2.8.5 1.1 1.2 2.1 2 3 .2.2.5.2.7 0l1.6-2.1c.2-.2.5-.2.7 0L21 8.4c.2.2.2.6 0 .8l-1.8 2c-.2.2-.2.5 0 .7l2 2.4c.3.4 0 .9-.5.9h-2.9c-.4 0-.8-.2-1-.5l-1.3-1.7c-.2-.2-.6-.2-.8.1-.4.6-.8 1.1-1.2 1.6-.2.3-.6.5-.9.5H9.8c-3.8 0-6.8-3.2-6.8-7V7z"/></svg>
+          </a>
+          <a href="#" aria-label="Telegram" title="Telegram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.04 15.38 8.8 19.4c.38 0 .56-.16.76-.35l1.83-1.76 3.8 2.79c.7.39 1.2.18 1.38-.65l2.5-11.73c.22-1.01-.36-1.4-1.04-1.16L3.6 10.05c-.99.38-.98.92-.18 1.17l3.86 1.21 8.96-5.61c.42-.26.81-.12.49.14"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>© <span id="year"></span> Pulse Gym</span>
+        <a class="muted" href="contact.html#policy">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
