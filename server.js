@@ -4,6 +4,7 @@ const fs = require('fs');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
 const { Pool } = require('pg'); // ИСПОЛЬЗУЕМ 'pg' ВМЕСТО 'sqlite3'
+const pgSession = require('connect-pg-simple')(session); // <-- ADD THIS LINE
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -82,13 +83,15 @@ const dbAll = async (sql, params = []) => {
 });
 
 // Middlewares
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 app.use(session({
+  store: new pgSession({
+    pool: pool, // Use our existing database connection
+    createTableIfMissing: true, // Automatically create the session table
+  }),
   secret: SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
-  cookie: { secure: 'auto', maxAge: 24 * 60 * 60 * 1000 }
+  cookie: { secure: 'auto', maxAge: 24 * 60 * 60 * 1000 } // 1 day
 }));
 
 app.use('/', express.static(path.join(__dirname, 'public')));
